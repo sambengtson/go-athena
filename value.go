@@ -83,7 +83,7 @@ func convertValue(athenaType string, rawValue *string) (interface{}, error) {
 	val := *rawValue
 	switch athenaType {
 	case "tinyint":
-		return strconv.ParseInt(val, 10, 16)
+		return strconv.ParseInt(val, 10, 8)
 	case "smallint":
 		return strconv.ParseInt(val, 10, 16)
 	case "integer", "int":
